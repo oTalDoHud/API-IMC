@@ -1,5 +1,7 @@
 package com.example.imc.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +20,11 @@ public class OperationService {
 		opRepo.save(op);
 		
 		return String.format("%.2f", imc);
+	}
+
+	public Operation findByid(Integer id) {
+		Optional<Operation> op = opRepo.findById(id);
+		
+		return op.get();
 	}
 }

@@ -49,27 +49,27 @@ public class Operation {
 		this.id = id;
 	}
 
-	public Double getN1() {
+	public Double getPeso() {
 		return n1;
 	}
 
-	public void setN1(Double n1) {
+	public void setPeso(Double n1) {
 		this.n1 = n1;
 	}
 
-	public Double getN2() {
+	public Double getAltura() {
 		return n2;
 	}
 
-	public void setN2(Double n2) {
+	public void setAltura(Double n2) {
 		this.n2 = n2;
 	}
 
-	public Double getResult() {
+	public Double getResultado() {
 		return result;
 	}
 
-	public void setResult(Double result) {
+	public void setResultado(Double result) {
 		this.result = result;
 	}
 
