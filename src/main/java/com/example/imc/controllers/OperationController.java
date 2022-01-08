@@ -16,8 +16,11 @@ public class OperationController {
 	private OperationService service;
 	
 	@PostMapping
-	public String imcResult(@RequestParam(name = "n1") Double n1, 
-			@RequestParam(name = "n2") Double n2) {
-		return service.imcResult(n1, n2);
+	public String imcResult(
+			@RequestParam(name = "peso") Double peso, 
+			@RequestParam(name = "altura") Double altura) {
+		
+		return service.imcResult(peso, altura);
+		
 	}
 }

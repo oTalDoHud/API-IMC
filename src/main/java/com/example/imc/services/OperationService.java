@@ -12,9 +12,9 @@ public class OperationService {
 	@Autowired
 	private OperationRepository opRepo;
 	
-	public String imcResult (Double n1, Double n2) {
-		double imc = n1 / Math.pow(n2, 2);
-		Operation op = new Operation(n1, n2, imc);
+	public String imcResult (Double peso, Double altura) {
+		double imc = peso / Math.pow(altura, 2);
+		Operation op = new Operation(peso, altura, imc);
 		opRepo.save(op);
 		
 		return String.format("%.2f", imc);

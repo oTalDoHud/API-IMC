@@ -15,10 +15,10 @@ public class Operation {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name = "Numeros_1")
+	@Column(name = "Pesos")
 	private Double n1;
 	
-	@Column(name = "Numeros_2")
+	@Column(name = "Alturas")
 	private Double n2;
 	
 	@Column(name = "Resultados")
