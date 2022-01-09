@@ -32,7 +32,7 @@ public class OperationService {
 		double imc = peso / Math.pow(altura, 2);
 		Operation op = new Operation(peso, altura, imc, Gender.MASCULINO);
 		opRepo.save(op);
-		String strImc = String.format("%.2f", imc);
+		String strImc = String.format("%.1f", imc);
 		
 		if (imc < 18) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
@@ -88,7 +88,7 @@ public ResponseEntity<String> imcResultWoman (Double peso, Double altura) {
 		double imc = peso / Math.pow(altura, 2);
 		Operation op = new Operation(peso, altura, imc, Gender.FEMININO);
 		opRepo.save(op);
-		String strImc = String.format("%.2f", imc);
+		String strImc = String.format("%.1f", imc);
 		
 		if (imc < 18) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
