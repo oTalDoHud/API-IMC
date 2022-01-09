@@ -31,7 +31,7 @@ public class Operation {
 	@Column(name = "Resultados")
 	private Double result;
 	
-	@Column(name = "Momento")
+	@Column(name = "Momentos")
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
 	private Instant moment;
 	

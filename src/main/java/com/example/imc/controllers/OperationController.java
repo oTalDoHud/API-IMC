@@ -1,8 +1,7 @@
 package com.example.imc.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,8 +43,12 @@ public class OperationController {
 	}
 	
 	@GetMapping(path = "/all")
-	public List<Operation> imcFindAll() {
+	public Page<Operation> imcFindAll() {
 		return service.findAll();
 	}
 	
+	@GetMapping(path = "/all/pag/{numPag}")
+	public Page<Operation> imcFindAllPag(@PathVariable int numPag) {
+		return service.findAllPag(numPag);
+	}
 }

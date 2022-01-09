@@ -1,10 +1,11 @@
 package com.example.imc.services;
 
 import java.time.Instant;
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -142,7 +143,13 @@ public ResponseEntity<String> imcResultWoman (Double peso, Double altura) {
 		return op.get();
 	}
 	
-	public List<Operation> findAll() {
-		return opRepo.findAll();
+	public Page<Operation> findAll() {
+		PageRequest page = PageRequest.of(0, 10000);
+		return opRepo.findAll(page);
+	}
+
+	public Page<Operation> findAllPag(int numPag) {
+		PageRequest page = PageRequest.of(numPag, 10);
+		return opRepo.findAll(page);
 	}
 }
