@@ -35,32 +35,38 @@ public class OperationService {
 		
 		if (imc < 18) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com baixo peso, procure um médico.");
+					+ "\nVocê está com baixo peso, procure um médico."
+					+ "\nO seu IMC ideal é de 18-25");
 		}
 		
 		if (imc >= 18 && imc <= 25) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com peso normal.");
+					+ "\nVocê está com peso normal."
+					+ "\nO seu IMC ideal é de 18-25");
 		}
 		
 		if (imc > 25 && imc <= 35) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com sobrepeso.");
+					+ "\nVocê está com sobrepeso."
+					+ "\nO seu IMC ideal é de 18-25");
 		}
 		
 		if (imc > 35 && imc <= 40) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com obesidade moderada.");
+					+ "\nVocê está com obesidade moderada."
+					+ "\nO seu IMC ideal é de 18-25");
 		}
 		
 		if (imc > 40 && imc <= 50) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com obesidade grave.");
+					+ "\nVocê está com obesidade grave."
+					+ "\nO seu IMC ideal é de 18-25");
 		}
 		
 		if (imc > 50) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com obesidade gravíssima.");
+					+ "\nVocê está com obesidade gravíssima."
+					+ "\nO seu IMC ideal é de 18-25");
 		}
 		
 		return null;
@@ -85,37 +91,44 @@ public ResponseEntity<String> imcResultWoman (Double peso, Double altura) {
 		
 		if (imc < 18) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com baixo peso, procure um médico.");
+					+ "\nVocê está com baixo peso, procure um médico."
+					+ "\nO seu IMC ideal é de 18-24");
 		}
 		
 		if (imc < 18) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com baixo peso, procure um médico.");
+					+ "\nVocê está com baixo peso, procure um médico."
+					+ "\nO seu IMC ideal é de 18-24");
 		}
 		
 		if (imc >= 18 && imc <= 24) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com peso normal.");
+					+ "\nVocê está com peso normal."
+					+ "\nO seu IMC ideal é de 18-24");
 		}
 		
 		if (imc > 24 && imc <= 35) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com sobrepeso.");
+					+ "\nVocê está com sobrepeso."
+					+ "\nO seu IMC ideal é de 18-24");
 		}
 		
 		if (imc > 35 && imc <= 40) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com obesidade moderada.");
+					+ "\nVocê está com obesidade moderada."
+					+ "\nO seu IMC ideal é de 18-24");
 		}
 		
 		if (imc > 40 && imc <= 50) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com obesidade grave.");
+					+ "\nVocê está com obesidade grave."
+					+ "\nO seu IMC ideal é de 18-24");
 		}
 		
 		if (imc > 50) {
 			return ResponseEntity.ok().body("O seu IMC é: " + strImc 
-					+ "\nVocê está com obesidade gravíssima.");
+					+ "\nVocê está com obesidade gravíssima."
+					+ "\nO seu IMC ideal é de 18-24");
 		}
 		
 		return null;
