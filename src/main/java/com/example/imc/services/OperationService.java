@@ -18,8 +18,9 @@ public class OperationService {
 		double imc = peso / Math.pow(altura, 2);
 		Operation op = new Operation(peso, altura, imc);
 		opRepo.save(op);
+		String strImc = String.format("%.2f", imc);
 		
-		return String.format("%.2f", imc);
+		return "O seu IMC é: " + strImc;
 	}
 
 	public Operation findByid(Integer id) {
