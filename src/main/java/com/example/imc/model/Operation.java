@@ -2,10 +2,14 @@ package com.example.imc.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.example.imc.model.enums.Gender;
 
 @Entity
 @Table(name = "Tb_Operations")
@@ -23,22 +27,28 @@ public class Operation {
 	
 	@Column(name = "Resultados")
 	private Double result;
+	
+	@Column(name = "Generos")
+	@Enumerated(EnumType.STRING)
+	private Gender gender;
 
 	public Operation() {
 
 	}
 	
-	public Operation(Double n1, Double n2, Double result) {
+	public Operation(Double n1, Double n2, Double result, Gender gender) {
 		this.n1 = n1;
 		this.n2 = n2;
 		this.result = result;
+		this.gender = gender;
 	}
 	
-	public Operation(Integer id, Double n1, Double n2, Double result) {
+	public Operation(Integer id, Double n1, Double n2, Double result, Gender gender) {
 		this.id = id;
 		this.n1 = n1;
 		this.n2 = n2;
 		this.result = result;
+		this.gender = gender;
 	}
 
 	public Integer getId() {
@@ -71,6 +81,14 @@ public class Operation {
 
 	public void setResultado(Double result) {
 		this.result = result;
+	}
+
+	public Gender getGenero() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
 	}
 
 	@Override

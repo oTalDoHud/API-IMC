@@ -19,12 +19,20 @@ public class OperationController {
 	@Autowired
 	private OperationService service;
 	
-	@PostMapping
-	public ResponseEntity<String> imcResult(
+	@PostMapping(path = "/mulher")
+	public ResponseEntity<String> imcResultMulher(
 			@RequestParam(name = "peso") Double peso, 
 			@RequestParam(name = "altura") Double altura) {
 		
-		return service.imcResult(peso, altura);
+		return service.imcResultWoman(peso, altura);
+	}
+	
+	@PostMapping(path = "/homem")
+	public ResponseEntity<String> imcResultHomem(
+			@RequestParam(name = "peso") Double peso, 
+			@RequestParam(name = "altura") Double altura) {
+		
+		return service.imcResultMan(peso, altura);
 	}
 	
 	@GetMapping(path = "/{id}")
