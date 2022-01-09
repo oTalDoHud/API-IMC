@@ -1,5 +1,7 @@
 package com.example.imc.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,9 +37,15 @@ public class OperationController {
 		return service.imcResultMan(peso, altura);
 	}
 	
-	@GetMapping(path = "/{id}")
+	@GetMapping(path = "/id/{id}")
 	public Operation imcFindById(@PathVariable Integer id) {
 		
 		return service.findByid(id);
 	}
+	
+	@GetMapping(path = "/all")
+	public List<Operation> imcFindAll() {
+		return service.findAll();
+	}
+	
 }
