@@ -1,5 +1,7 @@
 package com.example.imc.model;
 
+import java.time.Instant;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.example.imc.model.enums.Gender;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "Tb_Operations")
@@ -28,6 +31,10 @@ public class Operation {
 	@Column(name = "Resultados")
 	private Double result;
 	
+	@Column(name = "Momento")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+	private Instant moment;
+	
 	@Column(name = "Generos")
 	@Enumerated(EnumType.STRING)
 	private Gender gender;
@@ -36,18 +43,20 @@ public class Operation {
 
 	}
 	
-	public Operation(Double n1, Double n2, Double result, Gender gender) {
+	public Operation(Double n1, Double n2, Double result, Instant moment, Gender gender) {
 		this.n1 = n1;
 		this.n2 = n2;
 		this.result = result;
+		this.moment = moment;
 		this.gender = gender;
 	}
 	
-	public Operation(Integer id, Double n1, Double n2, Double result, Gender gender) {
+	public Operation(Integer id, Double n1, Double n2, Double result, Instant moment, Gender gender) {
 		this.id = id;
 		this.n1 = n1;
 		this.n2 = n2;
 		this.result = result;
+		this.moment = moment;
 		this.gender = gender;
 	}
 
@@ -89,6 +98,14 @@ public class Operation {
 
 	public void setGender(Gender gender) {
 		this.gender = gender;
+	}
+	
+	public Instant getMomento() {
+		return moment;
+	}
+
+	public void setMoment(Instant moment) {
+		this.moment = moment;
 	}
 
 	@Override

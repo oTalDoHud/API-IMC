@@ -1,5 +1,6 @@
 package com.example.imc.services;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,7 +31,7 @@ public class OperationService {
 		}
 		
 		double imc = peso / Math.pow(altura, 2);
-		Operation op = new Operation(peso, altura, imc, Gender.MASCULINO);
+		Operation op = new Operation(peso, altura, imc, Instant.now(), Gender.MASCULINO);
 		opRepo.save(op);
 		String strImc = String.format("%.1f", imc);
 		
@@ -86,7 +87,7 @@ public ResponseEntity<String> imcResultWoman (Double peso, Double altura) {
 		}
 		
 		double imc = peso / Math.pow(altura, 2);
-		Operation op = new Operation(peso, altura, imc, Gender.FEMININO);
+		Operation op = new Operation(peso, altura, imc, Instant.now(), Gender.FEMININO);
 		opRepo.save(op);
 		String strImc = String.format("%.1f", imc);
 		
