@@ -47,8 +47,9 @@ public class OperationController {
 		return service.findAll();
 	}
 	
-	@GetMapping(path = "/all/pag/{numPag}")
-	public Page<Operation> imcFindAllPag(@PathVariable int numPag) {
-		return service.findAllPag(numPag);
+	@GetMapping(path = "/all/pag/{numPag}/size/{size}")
+	public Page<Operation> imcFindAllPag(@PathVariable int numPag,
+			@PathVariable int size) {
+		return service.findAllPag(numPag, size);
 	}
 }

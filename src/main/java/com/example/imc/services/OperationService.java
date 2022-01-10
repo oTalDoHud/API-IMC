@@ -148,8 +148,9 @@ public ResponseEntity<String> imcResultWoman (Double peso, Double altura) {
 		return opRepo.findAll(page);
 	}
 
-	public Page<Operation> findAllPag(int numPag) {
-		PageRequest page = PageRequest.of(numPag, 10);
+	public Page<Operation> findAllPag(int numPag, int size) {
+		if(size >= 10000) size = 10000;
+		PageRequest page = PageRequest.of(numPag, size);
 		return opRepo.findAll(page);
 	}
 }
