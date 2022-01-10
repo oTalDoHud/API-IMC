@@ -31,7 +31,6 @@ public class Operation {
 	@Column(name = "Resultados")
 	private Double result;
 	
-	@Column(name = "Momentos")
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
 	private Instant moment;
 	
@@ -100,7 +99,7 @@ public class Operation {
 		this.gender = gender;
 	}
 	
-	public Instant getMomento() {
+	public Instant getMoment() {
 		return moment;
 	}
 
