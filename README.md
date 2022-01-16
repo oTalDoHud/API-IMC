@@ -13,7 +13,7 @@ A aplicação consiste em um web service, arquitetado no padrão MVC que recebe 
 O projeto está arquitetado no padrão MVC, com responsabilidades divididas entre camada Rest, service e Repository.
 
 ## Requisições IMC - Consultas de IMC
-Todas as requisições foram feitas pelo [Postman](https://web.postman.co "Site da DevSuperior"):
+Todas as requisições foram feitas pelo [Postman](https://web.postman.co "Site Postman"):
 <br/>
 ![req](https://github.com/oTalDoHud/API-IMC/blob/main/assets/Req_possiveis/baixoPeso_Homem.png)
 
