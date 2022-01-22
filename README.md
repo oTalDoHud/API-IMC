@@ -28,13 +28,13 @@ Todas as requisições foram feitas pelo [Postman](https://web.postman.co "Site 
 ![req](https://github.com/oTalDoHud/API-IMC/blob/main/assets/Req_possiveis/Obesidade_gravissima_mulher.png)]
 
 ## Requisições IMC - Consultas inválidas
-### A requisição retorna o IMC e um aviso de como a pessoa está.
+### A requisição retorna um aviso do que está errado.
 Todas as requisições foram feitas pelo [Postman](https://web.postman.co "Site da DevSuperior"):
 <br/>
 <br/>
-![req](https://github.com/oTalDoHud/API-IMC/blob/main/assets/Req_Erro/menor_0.png)]
+![req](https://github.com/oTalDoHud/API-IMC/blob/main/assets/Req_Erro/menor_0.png)
 
-![req](https://github.com/oTalDoHud/API-IMC/blob/main/assets/Req_Erro/req_0.png)]
+![req](https://github.com/oTalDoHud/API-IMC/blob/main/assets/Req_Erro/req_0.png)
 
 A API aceita apenas requisições positivas e diferentes de zero.
 <br/>
